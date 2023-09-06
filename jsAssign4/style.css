@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+background: #68676746;
+}
+
+.hidden{
+    display: none;
+}
+
+.main{
+    width: 300px;
+    height: 500px;
+    box-shadow:  0 0 20px #cf6b6b;
+    background:  #ff5e5e4b;
+    padding: 20px;
+    margin: 50px auto  ;
+    border-radius: 20px;
+}
+
+.todoList{
+    margin-top: 20px;
+    height: 97%;
+    
+}
+
+#todoList{
+    height: 97%;
+    overflow: auto;
+}
+#todoList::-webkit-scrollbar{
+    width: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+    background: #cf6b6b; 
+    box-shadow:  0 0 10px #555;
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #ff5e5e4b; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+.liData{
+    width: 260px;
+    list-style: none;
+    margin: 20px;
+    padding: 10px 20px;
+    border-radius: 20px;
+box-shadow: -2px -1px 5px #ffffff;
+position: relative;
+display: flex;
+justify-content: space-between;
+}
+
+.listDataValue{
+    overflow-wrap: break-word;
+    width: 80%;
+}
+.liBtn{
+position: absolute;
+right: 5px;
+}
+
+.btn{
+    border: none;
+    background: none;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.todoAdd{
+    height: 80%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#inp{
+    width: 250px;
+    height: 150px;
+    background-color: #68676746;
+    border-radius: 20px;
+    border: none;
+    padding: 10px;
+}
+
+#inp::placeholder{
+    text-align: start;
+    color: #fff;
+    padding: 20px;
+    vertical-align: text-top;
+}
+
+.inpDiv{
+    box-shadow: 0 0 10px #ffffff;
+    border-radius: 20px;
+    padding: 2px;
+}
+
+.newBtn{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #ff5e5e4b;
+    border: 2px solid #68676746;
+    box-shadow: 0 0 10px #fff;
+}
+
+#updateInp{
+    width: 200px;
+    background-color: #68676746;
+    border-radius: 20px;
+    border: none;
+    padding: 10px;
+    margin: 5px;
+}
