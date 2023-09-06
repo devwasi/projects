@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StopWatch | Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <section id="stopWatch" class="main">
+        <button class="switch" onclick="switchTimer()">Switch to Timer</button>
+        <section>
+            <h1 class="appName">STOP WATCH</h1>
+        </section>
+
+      <!-- stop watch start -->
+      <section  class="watch">
+        <section class="clock">
+            <h2 id="min" class="time">00</h2>
+            <h2 id="sec" class="time">00</h2>
+            <h2 id="msec" class="time">00</h2>
+        </section>
+        <section>
+            <button id="startBtn" class="btn" onclick="start()">Start</button>
+            <button id="stopBtn" class="btn hidden" onclick="stop()">Stop</button>
+            <button id="resetBtn" class="btn hidden" onclick="reset()">Reset</button>
+        </section>
+        <section class="owner">
+            <h2>By : <a href="https://github.com/devwasi" target="_blank" >devwasi</a></h2>
+        </section>
+    </section>
+
+    <!--  stop watch end -->
+
+    </section>
+
+    <section id="timer" class="main hidden">
+        <button class="switch" onclick="switchTimer()">Switch to StopWatch</button>
+
+        <section>
+            <h1 class="appName" >TIMER</h1>
+        </section>
+
+       
+
+        <!-- Timer start -->
+
+        <section  class="watch">
+            <section class="clock">
+                <h2 id="timerMin" class="time">05</h2>
+                <h2 id="timerSec" class="time">00</h2>
+                <h2 id="timerMsec" class="time">00</h2>
+            </section>
+            <section>
+                <button id="timerStartBtn" class="btn" onclick="timerStart()">Start</button>
+                <button id="timerStopBtn" class="btn hidden" onclick="timerStop()">Stop</button>
+                <button id="timerResetBtn" class="btn hidden" onclick="timerReset()">Reset</button>
+            </section>
+        </section>
+        <section class="owner">
+            <h2>By : <a href="https://github.com/devwasi" target="_blank">devwasi</a></h2>
+        </section>
+        <!-- Timer End -->
+
+    </section>
+
+   
+
+    <script src="app.js"></script>
+</body>
+
+</html>
