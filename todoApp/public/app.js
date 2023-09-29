@@ -23,25 +23,18 @@ var updateDataScreen = document.getElementById("updateDataScreen")
  // Your web app's Firebase configuration
  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
  var firebaseConfig = {
-    apiKey: "AIzaSyCnz0xSV19Cvn9AldpPwnVlX0Iv0fHZgBg",
-    authDomain: "testwasiauth.firebaseapp.com",
-    projectId: "testwasiauth",
-    storageBucket: "testwasiauth.appspot.com",
-    messagingSenderId: "1065191757221",
-    appId: "1:1065191757221:web:9918c58570120efaf7044c",
-    measurementId: "G-CFV9JFDWYN"
+    apiKey: "AIzaSyBOGxf5PumORAMdXrA00WuzpSPh0L_qBzA",
+    authDomain: "wasitodoapp.firebaseapp.com",
+    projectId: "wasitodoapp",
+    storageBucket: "wasitodoapp.appspot.com",
+    messagingSenderId: "1073376928737",
+    appId: "1:1073376928737:web:ef1a315bf92debe6aae8a0",
+    measurementId: "G-B4LGP71SDW"
   };
 
  // Initialize Firebase
  var app = initializeApp(firebaseConfig);
  var DATABASE = getDatabase(app);
-
-
-
-
-
-
-
 
 
 // render in page
