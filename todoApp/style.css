@@ -52,7 +52,7 @@ background: #68676746;
     background: #555; 
   }
 
-.liData{
+.liData {
     width: 260px;
     list-style: none;
     margin: 20px;
@@ -119,7 +119,7 @@ right: 5px;
     box-shadow: 0 0 10px #fff;
 }
 
-#updateInp{
+#updateInput{
     width: 200px;
     background-color: #68676746;
     border-radius: 20px;

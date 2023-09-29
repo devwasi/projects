@@ -39,13 +39,17 @@
 
         <div class="todoAdd">
             <div>
-                <button class="newBtn" onclick="render(true)"><i class="fa-solid fa-trash-can fa-xl"></i></button>
+                <button class="newBtn" onclick="deleteAllData()"><i class="fa-solid fa-trash-can fa-xl"></i></button>
             </div>
 
             <div class="todoList">
                 <ul id="todoList">
 
                 </ul>
+            </div>
+
+            <div class="updateDataScreen" id="updateDataScreen" class="hidden">
+                
             </div>
 
             <div>
@@ -56,7 +60,7 @@
     </div>
 
 
-    <script src="app.js"></script>
+    <script type="module" src="app.js"></script>
 </body>
 
 </html>
