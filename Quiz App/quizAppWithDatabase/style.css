@@ -1,0 +1,22 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(hsla(36, 100%, 51%, 0.506) ,#ff9b0469, #ff9b045e, #ff9b0434) ;
+    background-size: contain;
+}
+.main{
+    height: 100vh;
+    min-width: 400px;
+}
+
+.inputText{
+    border: none;
+    border: 2px solid #d69c61;
+    background: #ff9b0446;
+}
+
+.inputText::placeholder{
+    color: #000000a4;
+    text-align: center;
+}

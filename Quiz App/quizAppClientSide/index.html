@@ -14,7 +14,7 @@
 
     <div>
 
-        <div class="container shadow-lg border-dark rounded-4 my-3 p-4 text-center customClass" id="obtScore">
+        <div class="container shadow-lg border-dark rounded-4 my-3 p-4 text-center customClass" id="startQuiz">
             <div class="mb-5">
                 <h3>
                     welcome to Quiz App
@@ -22,24 +22,41 @@
                 <hr />
             </div>
             <div>
-            <!-- name  -->
-            <div >
-                <div class="form-floating my-3">
-                    <input type="email" class="form-control rounded-pill shadow-lg px-5 my-3" id="fName"
-                        placeholder="First Name">
-                    <label for="floatingInput" class="px-5">First Name</label>
+                <!-- name  -->
+                <div>
+                    <div class="form-floating my-3">
+                        <input type="email" class="form-control rounded-pill shadow-lg px-5 my-3" id="fName"
+                            placeholder="First Name">
+                        <label for="floatingInput" class="px-5">First Name</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control rounded-pill shadow-lg px-5 my-3" id="lName"
+                            placeholder="Last Name" id="lName">
+                        <label for="floatingInput" class="px-5">Last Name</label>
+                    </div>
                 </div>
-                <div class="form-floating mb-3">
-                    <input type="email" class="form-control rounded-pill shadow-lg px-5 my-3" id="lName"
-                        placeholder="Last Name" id="lName">
-                    <label for="floatingInput" class="px-5">Last Name</label>
+                <div class="d-grid my-2">
+                    <button class="btn btn-primary rounded-pill shadow-lg fixHeight" onclick="start()">start</button>
                 </div>
+                <!-- quiz attempted by users -->
+                <div>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>S.No</th>
+                                <th>Full Name</th>
+                                <th>Score</th>
+                            </tr>
+                        </thead>
+                        <tbody id="quizAttempted">
+                            
+
+                        </tbody>
+
+                    </table>
+                </div>
+
             </div>
-            <div class="d-grid my-2">
-                <button class="btn btn-primary rounded-pill shadow-lg fixHeight" onclick="start()">start</button>
-            </div>
-           
-        </div>
         </div>
 
         <div class="container shadow-lg border-dark rounded-4 my-3 p-4 customClass hidden" id="questionDisplay">
@@ -90,7 +107,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
-    <script src="app.js"></script>
+    <script type="module" src="app.js"></script>
 </body>
 
 </html>
