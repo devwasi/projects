@@ -20,6 +20,17 @@ background: #68676746;
     margin: 50px auto  ;
     border-radius: 20px;
 }
+.mainLoginScreen{
+    width: 300px;
+    min-width: 300px;
+    height: 400px;
+    box-shadow:  0 0 20px #cf6b6b;
+    background:  #ff5e5e4b;
+    padding: 20px;
+    margin: 50px auto  ;
+    border-radius: 20px !important;
+}
+
 
 .todoList{
     margin-top: 20px;
@@ -73,7 +84,7 @@ position: absolute;
 right: 5px;
 }
 
-.btn{
+.btnEdit{
     border: none;
     background: none;
     margin-right: 10px;
@@ -117,6 +128,7 @@ right: 5px;
     background-color: #ff5e5e4b;
     border: 2px solid #68676746;
     box-shadow: 0 0 10px #fff;
+    cursor: pointer;
 }
 
 #updateInput{
