@@ -17,7 +17,7 @@ var updateDataScreen = document.getElementById("updateDataScreen")
  // Import the functions you need from the SDKs you need
  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
  import { getAuth, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js";
- import { getDatabase, ref, set, onChildAdded, update, remove } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-database.js";
+ import { getDatabase, ref, set,onValue, onChildAdded, update, remove } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-database.js";
  // TODO: Add SDKs for Firebase products that you want to use
  // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -45,8 +45,14 @@ var updateDataScreen = document.getElementById("updateDataScreen")
         if (user) {
           // User is signed in, see docs for a list of available properties
           // https://firebase.google.com/docs/reference/js/auth.user
-          getDataFromDatabase()
           userUid = user.uid
+          onChildAdded(ref(DATABASE, `users/${userUid}/todos`), function (snapshot) {
+            // const username = (snapshot.val() && snapshot.val().username) || 'Anonymous';
+            render(snapshot.val())
+            // ...
+          }, {
+            onlyOnce: true
+          });
           // ...
         } else {
           // User is signed out
@@ -60,12 +66,14 @@ var updateDataScreen = document.getElementById("updateDataScreen")
 
 function render(data){
     todoList.innerHTML = "";
-
     if(data)
     {
         startScreen.classList.add("hidden")
         todoAdd.classList.remove("hidden")
         todoData.push(data)
+    }else{
+        startScreen.classList.remove("hidden")
+        todoAdd.classList.add("hidden")
     }
 
     for(var i=0; i<todoData.length;i++){
@@ -107,6 +115,9 @@ function getDataFromDatabase(){
     onChildAdded(reference,function(data){
       render(data.val())
     })
+
+
+   
   }
 
 // window.onload = getDataFromDatabase()
@@ -160,14 +171,15 @@ window.deleteTodo = function(indexNum,id){
     var refer = ref(DATABASE, `users/${userUid}/todos/${id}`)
     remove(refer);
     todoData = []
-    getDataFromDatabase()
+    render()
 }
 
 // delete all
 window.deleteAllData = function (){
+    todoData = []
     var refer = ref(DATABASE,`users/${userUid}/todos`)
-    remove(refer)
-    console.log("first")
+    remove(refer);
+    render()
 }
 
 // sign out 
